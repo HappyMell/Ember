@@ -1,0 +1,68 @@
+.gallery-wrapper {
+  flex: 1;
+  order: 3;
+  padding: 0 18px 18px 18px;
+  width: 100%;
+  height: auto;
+  max-width: none;
+  max-height: none;
+  position: sticky;
+  top: 0px;
+
+  @include respond-to(sm) {
+    padding: 0 0 18px 0;
+  }
+
+  @include respond-to(md) {
+    padding: 0 0 72px 0;
+  }
+
+  @include respond-to(lg) {
+    padding: 0;
+    height: 100vh;
+    max-width: 45vw;
+    max-height: 100vh;
+    order: 1;
+  }
+
+  @include respond-to(lg) {
+    &__logo {
+      position: absolute;
+      top: 48px;
+      left: 48px;
+      bottom: auto;
+      right: auto;
+      z-index: 20;
+    }
+  }
+
+
+
+  .gallery {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    max-width: 528px;
+    position: relative;
+    background-color: #ddd;
+
+    @include respond-to(lg) {
+      height: 100vh;
+      width: 100%;
+      margin: 0;
+      max-width: none;
+    }
+
+    img {
+      position: absolute;
+      z-index: 10;
+      width: 100%;
+
+      @include respond-to(lg) {
+        height: 100%;
+        max-width: 100%;
+      }
+    }
+  }
+}

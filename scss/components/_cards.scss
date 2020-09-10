@@ -1,0 +1,19 @@
+.cards {
+  color: $brand-color;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  border: 1px solid rgba(14, 14, 15, 0.1);
+  cursor: pointer;
+
+  p {
+    font-size: 16px;
+  }
+
+  @include respond-to(sm) {
+    padding: 36px;
+    font-size: 18px;
+  }
+}

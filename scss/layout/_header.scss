@@ -1,0 +1,188 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+.page-header {
+  order: 1;
+  position: sticky;
+  display: block;
+  height: auto;
+  background-color: $white;
+  opacity: 1;
+  z-index: 5;
+  top: 0;
+
+  @include respond-to(lg) {
+    order: 2;
+    height: 100vh;
+  }
+
+  &__nav {
+    height: auto;
+    position: relative;
+
+    @include respond-to(lg) {
+      height: 100vh;
+      position: relative;
+      z-index: 1000;
+    }
+
+    &--column {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: space-between;
+      width: 100%;
+      height: auto;
+      max-height: 100vh;
+
+      @include respond-to(lg) {
+        width: 72px;
+        height: 100vh;
+        max-height: 100vh;
+      }
+
+      .navbar-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 24px;
+
+        @include respond-to(lg) {
+          padding: 0;
+        }
+
+        &__logo {
+          @include respond-to(lg) {
+            display: none;
+          }
+        }
+      }
+
+      .social-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        @include respond-to(lg) {
+          flex-direction: column;
+          align-items: stretch;
+          justify-content: flex-start;
+        }
+
+        &__item {
+          background-color: $white;
+          flex: 1;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 72px;
+          height: 72px;
+          border-right: 1px solid rgba(14, 14, 15, 0.1);
+          border-top: 1px solid rgba(14, 14, 15, 0.1);
+          max-width: 100%;
+          cursor: pointer;
+
+          @include respond-to(lg) {
+            flex: none;
+          }
+
+          &:hover {
+            background-color: $brand-color;
+          }
+
+          &:hover .logo {
+            filter: invert(100%);
+          }
+
+          .logo {
+            filter: invert(0%);
+            max-width: 100%;
+            display: inline-block;
+
+          }
+        }
+      }
+    }
+
+    .nav-menu {
+      // height: 100vw;
+      width: 0;
+      position: absolute;
+      z-index: 5;
+      top: 0;
+      left: 0;
+      background-color: $brand-color;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+
+
+
+      &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: space-between;
+        padding: 48px 24px;
+        height: 100vh;
+
+        @include respond-to(lg) {
+          padding: 120px 24px 48px 24px;
+        }
+
+
+        &--container {
+          display: block;
+          margin: 0 auto;
+          padding: 0 18px;
+          width: 100%;
+          max-width: 576px;
+
+          .vert-grid {
+            display: grid;
+            grid-auto-columns: 1fr;
+            grid-column-gap: 6px;
+            grid-row-gap: 6px;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+
+            .link {
+              padding: 0;
+              margin: 0;
+              font-size: 28px;
+              line-height: 32px;
+              letter-spacing: -0.02em;
+              text-decoration: none;
+              color: $white;
+              opacity: 0.5;
+              list-style: none;
+
+
+              a {
+                padding: 0;
+                margin: 0;
+                font-size: 28px;
+                line-height: 32px;
+                letter-spacing: -0.02em;
+                text-decoration: none;
+                color: $white;
+                opacity: 0.5;
+              }
+
+              &:hover {
+                opacity: 1;
+              }
+            }
+
+            .divider {
+              margin: 36px 0;
+              width: 48px;
+              height: 1px;
+              border: 1px solid rgba(255, 255, 255, 0.25);
+            }
+          }
+        }
+      }
+    }
+  }
+}

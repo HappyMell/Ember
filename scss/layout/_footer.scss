@@ -1,0 +1,48 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+.footer {
+  display: block;
+  padding: 24px 0;
+  height: auto;
+  border-top: 1px solid rgba(14, 14, 15, 0.1);
+
+  @include respond-to(sm) {
+    height: 72px;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0 18px;
+    width: 100%;
+    max-width: 576px;
+
+    @include respond-to(sm) {
+      flex-direction: row;
+      padding: 0 24px;
+    }
+
+    p {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+      color: $brand-color;
+    }
+
+    .phone {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      color: $brand-color;
+      text-decoration: underline;
+
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+}

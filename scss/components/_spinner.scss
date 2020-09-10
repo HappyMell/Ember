@@ -1,0 +1,11 @@
+.loader {
+  display: inline-block;
+  //  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+  max-width: 100%;
+  background: $brand-color;
+}

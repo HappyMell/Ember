@@ -1,0 +1,35 @@
+.content {
+
+  .contact-grid {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-column-gap: 24px;
+    grid-row-gap: 24px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+
+    h5 {
+      margin-bottom: 18px;
+    }
+
+    p {
+      font-size: 16px;
+      font-weight: 500;
+
+      a {
+        color: $brand-color;
+        text-decoration: underline;
+
+        &:hover {
+          color: grey;
+        }
+      }
+    }
+  }
+
+  h3 {
+    margin-top: 48px;
+    margin-bottom: 24px;
+  }
+
+}
